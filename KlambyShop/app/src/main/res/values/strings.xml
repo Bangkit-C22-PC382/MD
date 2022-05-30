@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">KlambyShop</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="search_for_produtcts">Search for produtcts</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite">Favorite</string>
+    <string name="cart">Cart</string>
+    <string name="collections">Collections</string>
+    <string name="show_all">Show All</string>
+    <string name="shirts">Shirts</string>
+    <string name="bg_collection">bg_colection</string>
+    <string name="icon_collection">icon_collection</string>
+    <string name="hoodies">Hoodies</string>
+    <string name="jacket">Jacket</string>
+    <string name="t_shirts">T-Shirts</string>
+    <string name="bottoms">Bottoms</string>
+    <string name="image">image</string>
+    <string name="recommendation_products">Recommendation Products</string>
+    <string name="product_details">Product Details</string>
+    <string name="arrow_back">arrow back</string>
+    <string name="size">Size</string>
+    <string name="color">Color</string>
+    <string name="description">Description</string>
+    <string name="similar_product">Similar Product</string>
+</resources>

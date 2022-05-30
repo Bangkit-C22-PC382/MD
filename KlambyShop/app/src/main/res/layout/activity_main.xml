@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/ornament_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/circle_tosca"
+        app:layout_constraintBottom_toTopOf="@+id/ornament_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <ImageView
+        android:id="@+id/ornament_3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="368dp"
+        android:src="@drawable/circle_tosca"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
+
+    <ImageView
+        android:id="@+id/ornament_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/quar_cricle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ornament_4"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="376dp"
+        android:src="@drawable/circle_blue_blur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <ImageView
+        android:id="@+id/logo_tosca"
+        android:layout_width="128dp"
+        android:layout_height="339dp"
+        android:src="@drawable/logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <TextView
+        android:id="@+id/visi"
+        android:textColor="@color/tosca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sustainable Fashion Brand"
+        app:layout_constraintBottom_toTopOf="@+id/ornament_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ornament_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
