@@ -26,4 +26,5 @@
     <string name="color">Color</string>
     <string name="description">Description</string>
     <string name="similar_product">Similar Product</string>
+    <string name="price">Price</string>
 </resources>

@@ -285,16 +285,28 @@
             <TextView
                 android:id="@+id/text_price"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:gravity="center"
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/tosca"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Rp.5000" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_font_family"
+                android:paddingHorizontal="16dp"
+                android:text="@string/price"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_price" />
 
             <ImageView
                 android:id="@+id/imageView15"
