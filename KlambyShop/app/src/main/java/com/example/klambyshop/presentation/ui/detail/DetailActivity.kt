@@ -31,7 +31,7 @@ class DetailActivity : AppCompatActivity() {
 
         mainFavoriteViewModel = obtainFavoriteViewModel(this)
         mFavoriteAddUpdateViewModel = obtainFavoriteAddUpdateViewModel(this)
-        mainFavoriteViewModel.getUserById(dataDetail.id).observe(this,{
+        mainFavoriteViewModel.getKlambyById(dataDetail.id).observe(this,{
             if(it.size !=0){
                 klambyEntity = it.get(0)
 
