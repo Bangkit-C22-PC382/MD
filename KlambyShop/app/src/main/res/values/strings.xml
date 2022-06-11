@@ -28,4 +28,6 @@
     <string name="similar_product">Similar Product</string>
     <string name="price">Price</string>
     <string name="item_favorite">item_favorite</string>
+    <string name="instock">in Stock</string>
+    <string name="soldout">Sold Out</string>
 </resources>

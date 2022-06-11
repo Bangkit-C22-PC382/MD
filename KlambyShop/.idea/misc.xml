@@ -26,15 +26,29 @@
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/KlambyShop/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/KlambyShop/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1225" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/KlambyShop/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1225" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_baseline_chat.xml" value="0.203" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_baseline_remove_shopping_cart_24.xml" value="0.199" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_baseline_search.xml" value="0.1" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_cart.xml" value="0.203" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_like.xml" value="0.1645" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_location.xml" value="0.203" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.203" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_outline_account_circle_24.xml" value="0.203" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_outline_delete_forever_24.xml" value="0.203" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_outline_home_24.xml" value="0.203" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_outline_notifications_24.xml" value="0.203" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/drawable/ic_outline_shopping_cart_24.xml" value="0.203" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/activity_navigation.xml" value="0.353713768115942" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/fragment_cart.xml" value="0.2105978260869565" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/fragment_favorite.xml" value="0.1762917933130699" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/fragment_home.xml" value="0.353713768115942" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/fragment_profile.xml" value="0.353713768115942" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/rv_item_cart.xml" value="0.353713768115942" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/rv_item_favorite.xml" value="0.353713768115942" />
         <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/layout/rv_item_klamby.xml" value="0.353713768115942" />
+        <entry key="..\:/Users/lenovo/Downloads/MD/KlambyShop/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
       </map>
     </option>
   </component>

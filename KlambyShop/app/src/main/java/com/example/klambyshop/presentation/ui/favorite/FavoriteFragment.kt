@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.klambyshop.data.model.KlambyModel
 import com.example.klambyshop.databinding.FragmentFavoriteBinding
 import com.example.klambyshop.presentation.adapter.ListFavoriteAdapter
-import com.example.klambyshop.presentation.adapter.ListKlambyAdapter
 import com.example.klambyshop.presentation.ui.NavigationViewModel
 import com.example.klambyshop.presentation.ui.detail.DetailActivity
 import com.example.klambyshop.presentation.ui.favorite.factory.FavoriteModelFactory
@@ -30,7 +29,6 @@ class FavoriteFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var mainFavoriteViewModel: FavoriteViewModel
     private lateinit var mFavoriteAddUpdateViewModel : FavoriteAddUpdateViewModel
-    private lateinit var dataKlamby: ArrayList<KlambyModel>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -82,6 +80,14 @@ class FavoriteFragment : Fragment() {
 
                 val adapter = ListFavoriteAdapter(listKlamby,mFavoriteAddUpdateViewModel)
                 binding.rvFavorite.adapter = adapter
+
+                adapter.setOnItemClickCallback(object : ListFavoriteAdapter.OnItemClickCallback{
+                    override fun onItemClicked(klamby: KlambyModel) {
+                        val intentToDetail = Intent(requireActivity(),DetailActivity::class.java)
+                        intentToDetail.putExtra(DetailActivity.TAG_DETAIL_KLAMBY, klamby)
+                        startActivity(intentToDetail)
+                    }
+                })
             }
 
 
@@ -90,13 +96,18 @@ class FavoriteFragment : Fragment() {
 
     private fun obtainFavoriteViewModel(activity: AppCompatActivity): FavoriteViewModel {
         val factory = FavoriteModelFactory.getInstance(activity.application)
-        return ViewModelProvider(activity, factory).get(FavoriteViewModel::class.java)
+        return ViewModelProvider(activity, factory)[FavoriteViewModel::class.java]
     }
 
     private fun obtainFavoriteAddUpdateViewModel(activity: AppCompatActivity): FavoriteAddUpdateViewModel {
         val factory = FavoriteModelFactory.getInstance(activity.application)
-        return ViewModelProvider(activity, factory).get(FavoriteAddUpdateViewModel::class.java)
+        return ViewModelProvider(activity, factory)[FavoriteAddUpdateViewModel::class.java]
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 
 
 }

@@ -9,16 +9,16 @@ import com.example.klambyshop.data.repositories.FavoriteRepository
 class FavoriteAddUpdateViewModel (application: Application): ViewModel(){
     private val mFavoriteRepository: FavoriteRepository = FavoriteRepository(application)
 
-    fun insert(user : KlambyEntity){
-        mFavoriteRepository.insert(user)
+    fun insert(data : KlambyEntity){
+        mFavoriteRepository.insert(data)
     }
 
-    fun delete(user: KlambyEntity){
-        mFavoriteRepository.delete(user)
+    fun delete(data: KlambyEntity){
+        mFavoriteRepository.delete(data)
     }
 
-    fun update(user: KlambyEntity){
-        mFavoriteRepository.update(user)
+    fun update(data: KlambyEntity){
+        mFavoriteRepository.update(data)
     }
 
 }

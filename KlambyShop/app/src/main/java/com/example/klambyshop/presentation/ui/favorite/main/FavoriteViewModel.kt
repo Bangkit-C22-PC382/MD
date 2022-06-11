@@ -15,7 +15,7 @@ class FavoriteViewModel(application: Application): ViewModel() {
 
     fun getAllFavorite(): LiveData<List<KlambyEntity>> = mFavoriteRepository.getAllFavorite()
 
-    fun getKlambyById(id: String): LiveData<List<KlambyEntity>> = mFavoriteRepository.getUserbyId(id)
+    fun getKlambyById(id: String): LiveData<List<KlambyEntity>> = mFavoriteRepository.getKlambybyId(id)
 
 
 

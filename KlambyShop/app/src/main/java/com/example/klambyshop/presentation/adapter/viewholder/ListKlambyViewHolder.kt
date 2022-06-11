@@ -1,19 +1,20 @@
 package com.example.klambyshop.presentation.adapter.viewholder
 
+import android.content.Context
 import android.view.View
-import android.widget.ImageView
+//import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+//import com.bumptech.glide.Glide
 import com.example.klambyshop.R
 import com.example.klambyshop.data.model.KlambyModel
 
 class ListKlambyViewHolder(view:View):RecyclerView.ViewHolder(view) {
-    private val iv_image: ImageView = view.findViewById(R.id.iv_image)
+//    private val iv_image: ImageView = view.findViewById(R.id.iv_image)
     private val title_baju: TextView = view.findViewById(R.id.title_baju)
     private val price_baju: TextView = view.findViewById(R.id.price_baju)
     private val place_baju: TextView = view.findViewById(R.id.place_baju)
-    val context = view.context
+    val context: Context = view.context
 
 
     fun onBlind(element:KlambyModel){
