@@ -9,8 +9,11 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import com.example.klambyshop.data.repositories.AdsPreference
+import com.example.klambyshop.data.repositories.UserPreference
 import com.example.klambyshop.databinding.ActivityMainBinding
-import com.example.klambyshop.presentation.NavigationActivity
+import com.example.klambyshop.presentation.ui.ads.AdsActivity
+import com.example.klambyshop.presentation.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -21,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+        val adsPreference = AdsPreference(this)
+        val adsResult = adsPreference.getUser()
 
         val timeDelay = 3000
 
@@ -31,13 +36,21 @@ class MainActivity : AppCompatActivity() {
                 override fun onAnimationEnd(animation: Animator) {
                     binding.logoTosca.visibility = View.VISIBLE
                 }
-
             })
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intentToNavigationActivity = Intent(this@MainActivity, NavigationActivity::class.java)
-            startActivity(intentToNavigationActivity)
-            finish()
+            if(adsResult.ads != null){
+                val intentToNavigationActivity = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(intentToNavigationActivity)
+                finish()
+
+            }else{
+                val intentToAdsActivity= Intent(this@MainActivity, AdsActivity::class.java)
+                startActivity(intentToAdsActivity)
+                finish()
+
+            }
+
         },timeDelay.toLong())
 
     }

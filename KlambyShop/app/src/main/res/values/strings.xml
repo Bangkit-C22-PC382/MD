@@ -40,4 +40,26 @@
     <string name="please_add_the_product_you_like">Please add the product you like</string>
     <string name="add_product">Add Product</string>
     <string name="checkout">Checkout</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="format_email_tidak_valid">format email tidak valid</string>
+    <string name="password">Password</string>
+    <string name="minimal_6_karakter">minimal 6 karakter</string>
+    <string name="don_t_have_an_account_singup">Don\'t have an account? Singup</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account_login">Already have an account? login</string>
+    <string name="logout">Logout</string>
+    <string name="username_email_com">username@email.com</string>
+    <string name="zero_waste_lifestyle">Zero Waste Lifestyle</string>
+    <string name="the_movement_to_reduce_waste_by_reduce_the_need_reuse_recycle_and_make_your_own_compost">The movement to reduce waste by reduce the need, reuse, recycle, and make your own compost</string>
+    <string name="_1_of_3">1 of 3</string>
+    <string name="skip">skip</string>
+    <string name="thrifting">Thrifting</string>
+    <string name="secondhand_buying_behavior_which_can_still_be_used">Secondhand buying behavior which can still be used</string>
+    <string name="_2_of_3">2 of 3</string>
+    <string name="fashion_brand_with_good_practice_prioritize_environmental_and_human_values">Fashion brand with good practice prioritize environmental and human values</string>
+    <string name="_3_of_3">3 of 3</string>
+    <string name="next">next</string>
+    <string name="beta_version">BETA VERSION</string>
 </resources>

@@ -7,7 +7,7 @@
     xmlns:toll="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="160dp"
+        android:layout_width="165dp"
         android:orientation="vertical"
         app:cardCornerRadius="15dp"
         android:foreground="?android:attr/selectableItemBackground"

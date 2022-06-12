@@ -1,5 +1,6 @@
 package com.example.klambyshop.presentation.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +9,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.klambyshop.R
+import com.example.klambyshop.data.repositories.UserPreference
 import com.example.klambyshop.databinding.FragmentNotificationsBinding
 import com.example.klambyshop.databinding.FragmentProfileBinding
 import com.example.klambyshop.presentation.ui.NavigationViewModel
+import com.example.klambyshop.presentation.ui.login.LoginActivity
 
 class ProfileFragment : Fragment() {
 
@@ -39,6 +42,16 @@ class ProfileFragment : Fragment() {
 
         stateAppbar.updateStateNavigation("Profile")
         onclick()
+        val context = view.context
+
+        binding.logout.setOnClickListener{
+            val userPreference = UserPreference(context)
+            userPreference.setUser(null)
+            val intentToLogin = Intent(requireActivity(),LoginActivity::class.java)
+            intentToLogin.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intentToLogin)
+            activity?.finish()
+        }
     }
     private fun onclick(){
         binding.myorder.setOnClickListener {

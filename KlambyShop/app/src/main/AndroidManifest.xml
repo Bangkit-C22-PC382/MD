@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KlambyShop">
         <activity
+            android:name=".presentation.ui.ads.AdsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.ui.detail.DetailActivity"
             android:exported="false" />
         <activity
