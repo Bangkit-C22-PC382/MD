@@ -256,16 +256,25 @@
                 app:layout_constraintTop_toBottomOf="@+id/description_detail" />
 
             <TextView
+                android:id="@+id/title_similar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:text="@string/similar_product"
                 android:textColor="@color/tosca"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
                 app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list_baju"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_similar"
+                tools:listitem="@layout/rv_item_klamby">
+
+            </androidx.recyclerview.widget.RecyclerView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
@@ -309,7 +318,7 @@
                 app:layout_constraintStart_toStartOf="@+id/text_price" />
 
             <ImageView
-                android:id="@+id/imageView15"
+                android:id="@+id/checkout"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -322,16 +331,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
-                android:text="Checkout"
+                android:text="@string/checkout"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-                app:layout_constraintEnd_toEndOf="@+id/imageView15"
-                app:layout_constraintStart_toStartOf="@+id/imageView15"
+                app:layout_constraintBottom_toBottomOf="@+id/checkout"
+                app:layout_constraintEnd_toEndOf="@+id/checkout"
+                app:layout_constraintStart_toStartOf="@+id/checkout"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

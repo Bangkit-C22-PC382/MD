@@ -83,7 +83,7 @@
             <ImageView
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:id="@+id/imageView2"
+                android:id="@+id/colection1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/collection_1"
@@ -102,7 +102,7 @@
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView3"
-                app:layout_constraintStart_toStartOf="@+id/imageView2" />
+                app:layout_constraintStart_toStartOf="@+id/colection1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -129,7 +129,7 @@
             <ImageView
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:id="@+id/imageView5"
+                android:id="@+id/colection2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/collection_3"
@@ -148,7 +148,7 @@
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView4"
-                app:layout_constraintStart_toStartOf="@+id/imageView5" />
+                app:layout_constraintStart_toStartOf="@+id/colection2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -175,7 +175,7 @@
             <ImageView
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:id="@+id/imageView7"
+                android:id="@+id/colection3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/collection_5"
@@ -194,7 +194,7 @@
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView6"
-                app:layout_constraintStart_toStartOf="@+id/imageView7" />
+                app:layout_constraintStart_toStartOf="@+id/colection3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -221,7 +221,7 @@
             <ImageView
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:id="@+id/imageView9"
+                android:id="@+id/colection4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/collection_4"
@@ -240,7 +240,7 @@
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView8"
-                app:layout_constraintStart_toStartOf="@+id/imageView9" />
+                app:layout_constraintStart_toStartOf="@+id/colection4" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -268,7 +268,7 @@
             <ImageView
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:id="@+id/imageView11"
+                android:id="@+id/colection5"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/icon_collection"
@@ -288,7 +288,7 @@
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView10"
-                app:layout_constraintStart_toStartOf="@+id/imageView11" />
+                app:layout_constraintStart_toStartOf="@+id/colection5" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -329,6 +329,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="5dp"
         android:id="@+id/rv_list_baju"
+        android:layout_gravity="center"
         android:layout_marginBottom="?actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

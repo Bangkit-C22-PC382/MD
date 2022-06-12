@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackground"
@@ -25,6 +26,7 @@
             app:cardCornerRadius="10dp">
 
             <ImageView
+                android:id="@+id/cart_lock"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="100dp"

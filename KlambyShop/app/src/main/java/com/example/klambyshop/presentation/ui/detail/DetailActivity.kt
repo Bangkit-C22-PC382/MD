@@ -1,14 +1,20 @@
 package com.example.klambyshop.presentation.ui.detail
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.klambyshop.R
 import com.example.klambyshop.data.db.entities.CartEntity
 import com.example.klambyshop.data.db.entities.KlambyEntity
 import com.example.klambyshop.data.model.KlambyModel
+import com.example.klambyshop.data.util.DataKlamby
 import com.example.klambyshop.databinding.ActivityDetailBinding
+import com.example.klambyshop.presentation.adapter.ListKlambyAdapter
 import com.example.klambyshop.presentation.ui.cart.factory.CartModelFactory
 import com.example.klambyshop.presentation.ui.favorite.factory.FavoriteModelFactory
 import com.example.klambyshop.presentation.ui.cart.insert.CartAddUpdateViewModel
@@ -39,7 +45,7 @@ class DetailActivity : AppCompatActivity() {
         mFavoriteAddUpdateViewModel = obtainFavoriteAddUpdateViewModel(this)
         mainCartViewModel = obtainCartViewModel(this)
         mCartAddUpdateViewModel = obtainCartAddUpdateViewModel(this)
-
+        onclick()
         mainFavoriteViewModel.getKlambyById(dataDetail.id).observe(this) {
             klambyEntity = if (it.isNotEmpty()) {
                 it[0]
@@ -81,7 +87,22 @@ class DetailActivity : AppCompatActivity() {
         binding.ivArrowBack.setOnClickListener {
             finish()
         }
+        binding.rvListBaju.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false )
+        val adapter = ListKlambyAdapter(DataKlamby.DATA_LIST_KLAMBY)
+        binding.rvListBaju.adapter = adapter
+
+        adapter.setOnItemClickCallback(object : ListKlambyAdapter.OnItemClickCallback{
+
+            override fun onItemClicked(klamby: KlambyModel) {
+                val intentToDetail = Intent(this@DetailActivity,DetailActivity::class.java)
+                intentToDetail.putExtra(TAG_DETAIL_KLAMBY, klamby)
+                finish()
+                startActivity(intentToDetail)
+
+            }
+        })
     }
+
 
     fun setDetail(dataDetail:KlambyModel){
         binding.descriptionDetail.text = dataDetail.description
@@ -192,6 +213,24 @@ class DetailActivity : AppCompatActivity() {
 
         cartEntity = klamby
         mCartAddUpdateViewModel.insert(cartEntity!!)
+
+    }
+
+    private fun onclick(){
+        binding.checkout.setOnClickListener {
+            toastShow()
+        }
+        binding.ivShare.setOnClickListener {
+            toastShow()
+        }
+    }
+
+    private fun toastShow(){
+        val text = "Still under development!"
+        val duration = Toast.LENGTH_SHORT
+        val toast = Toast.makeText(this.applicationContext , text, duration)
+        toast.show()
+
 
     }
 

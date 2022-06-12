@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -49,7 +50,7 @@ class HomeFragment : Fragment() {
         val imageSlider:ImageSlider = binding.slider
         val slideModel :List<SlideModel> = listOf(SlideModel(R.drawable.slide_1),SlideModel(R.drawable.slide_2),SlideModel(R.drawable.slide_3))
         imageSlider.setImageList(slideModel,ScaleTypes.CENTER_CROP)
-
+        onclick()
         context?.let {
             binding.rvListBaju.layoutManager = GridLayoutManager(it, 2)
             val adapter = ListKlambyAdapter(DataKlamby.DATA_LIST_KLAMBY)
@@ -71,4 +72,38 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun onclick(){
+        binding.colection1.setOnClickListener {
+            toastShow()
+        }
+        binding.colection2.setOnClickListener {
+            toastShow()
+        }
+        binding.colection3.setOnClickListener {
+            toastShow()
+        }
+        binding.colection4.setOnClickListener {
+            toastShow()
+        }
+        binding.colection5.setOnClickListener {
+            toastShow()
+        }
+        binding.tvShowAll.setOnClickListener {
+            toastShow()
+        }
+        binding.tvShowAllRecommendation.setOnClickListener {
+            toastShow()
+        }
+    }
+
+    private fun toastShow(){
+        val text = "Still under development!"
+        val duration = Toast.LENGTH_SHORT
+        val toast = Toast.makeText(requireActivity().applicationContext , text, duration)
+        toast.show()
+
+
+    }
+
 }

@@ -3,6 +3,7 @@ package com.example.klambyshop.presentation
 import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
@@ -45,6 +46,8 @@ class NavigationActivity : AppCompatActivity() {
 
         }
 
+        onclick()
+
 
         val navController = findNavController(R.id.nav_host_fragment_activity_navigation)
 
@@ -55,5 +58,23 @@ class NavigationActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    private fun onclick(){
+        binding.searchBar.setOnClickListener {
+            toastShow()
+        }
+        binding.ivChat.setOnClickListener {
+            toastShow()
+        }
+    }
+
+    private fun toastShow(){
+        val text = "Still under development!"
+        val duration = Toast.LENGTH_SHORT
+        val toast = Toast.makeText(this.applicationContext , text, duration)
+        toast.show()
+
+
     }
 }
