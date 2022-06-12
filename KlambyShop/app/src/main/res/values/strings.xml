@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">KlambyShop</string>
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="title_home">Home</string>
@@ -30,4 +30,13 @@
     <string name="item_favorite">item_favorite</string>
     <string name="instock">in Stock</string>
     <string name="soldout">Sold Out</string>
+    <string name="username">Username</string>
+    <string name="my_order">My Order</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="general">General</string>
+    <string name="address_book">Address Book</string>
+    <string name="more">More</string>
+    <string name="sustainable_fashion_brand">Sustainable Fashion Brand</string>
+    <string name="please_add_the_product_you_like">Please add the product you like</string>
+    <string name="add_product">Add Product</string>
 </resources>

@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.klambyshop.R
 import com.example.klambyshop.data.model.KlambyModel
 import com.example.klambyshop.databinding.FragmentFavoriteBinding
 import com.example.klambyshop.presentation.adapter.ListFavoriteAdapter
@@ -18,8 +20,7 @@ import com.example.klambyshop.presentation.ui.detail.DetailActivity
 import com.example.klambyshop.presentation.ui.favorite.factory.FavoriteModelFactory
 import com.example.klambyshop.presentation.ui.favorite.insert.FavoriteAddUpdateViewModel
 import com.example.klambyshop.presentation.ui.favorite.main.FavoriteViewModel
-import java.util.*
-import kotlin.collections.ArrayList
+
 
 
 class FavoriteFragment : Fragment() {
@@ -53,10 +54,20 @@ class FavoriteFragment : Fragment() {
 
 
 
+
+
         context?.let { context ->
             binding.rvFavorite.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
             mainFavoriteViewModel.getAllFavorite().observe(viewLifecycleOwner) {
                 val listKlamby: MutableList<KlambyModel> = mutableListOf()
+                if(it.isEmpty()){
+                    binding.lyFavorite.visibility = View.VISIBLE
+                    binding.btnGohome.setOnClickListener { view ->
+                        view.findNavController().navigate(R.id.navigation_home)
+                    }
+                }else{
+                    binding.lyFavorite.visibility = View.GONE
+                }
 
                 it.forEach { unit ->
                     val dataKlamby =

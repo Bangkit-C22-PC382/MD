@@ -71,7 +71,7 @@
         android:textColor="@color/tosca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sustainable Fashion Brand"
+        android:text="@string/sustainable_fashion_brand"
         app:layout_constraintBottom_toTopOf="@+id/ornament_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

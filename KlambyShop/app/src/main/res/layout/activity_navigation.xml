@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -89,8 +90,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -108,13 +107,13 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="-37dp">
+        android:background="@color/white"
+        android:layout_height="match_parent">
 
         <fragment
             android:id="@+id/nav_host_fragment_activity_navigation"
             android:name="androidx.navigation.fragment.NavHostFragment"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultNavHost="true"

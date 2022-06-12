@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.klambyshop.R
 import com.example.klambyshop.data.model.KlambyModel
 import com.example.klambyshop.databinding.FragmentCartBinding
 import com.example.klambyshop.presentation.adapter.ListCartAdapter
@@ -50,8 +52,17 @@ class CartFragment : Fragment() {
 
         context?.let { context ->
             binding.rvCart.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            mainCartViewModel.getAllCart().observe(viewLifecycleOwner) {
+            mainCartViewModel.getAllCart().observe(viewLifecycleOwner) { it ->
                 val listKlamby: MutableList<KlambyModel> = mutableListOf()
+
+                if(it.isEmpty()){
+                    binding.lyCart.visibility = View.VISIBLE
+                    binding.btnGohome.setOnClickListener { view ->
+                        view.findNavController().navigate(R.id.navigation_home)
+                    }
+                }else{
+                    binding.lyCart.visibility = View.GONE
+                }
 
                 it.forEach { unit ->
                     val dataKlamby =
